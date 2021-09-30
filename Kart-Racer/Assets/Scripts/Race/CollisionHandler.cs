@@ -6,6 +6,8 @@ public class CollisionHandler : MonoBehaviour
 {
     public BoxCollider col;
 
+    public RaceHandler raceHandler;
+
     // Start is called before the first frame update
     
     void Start()
@@ -13,9 +15,10 @@ public class CollisionHandler : MonoBehaviour
         col = GetComponent<BoxCollider>();
     }
 
-    public void OnCollisionEnter(Collision col)
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ya yeet");
+        raceHandler.Collision(other.gameObject.name);
     }
 
     // Update is called once per frame
