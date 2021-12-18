@@ -5,6 +5,11 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
 
+    public enum Direction{
+        Forward,
+        Backward
+    }
+
     public GameObject car;
     public Rigidbody rb;
 
@@ -20,17 +25,23 @@ public class CarController : MonoBehaviour
     public Vector3 startPos;
     public Quaternion startRot;
 
+    public Direction direction;
+
     
 
     public void Move()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * drivingSpeed);
+            rb.AddForce(new Vector3(transform.forward.x, 0, transform.forward.z) * drivingSpeed);
+            direction = Direction.Forward;
+            //rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * drivingSpeed);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * -drivingSpeed);
+            rb.AddForce(new Vector3(transform.forward.x, 0, transform.forward.z) * -drivingSpeed);
+            direction = Direction.Backward;
+            // rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * -drivingSpeed);
         }
         Vector3 localVelo = transform.InverseTransformDirection(rb.velocity);
         localVelo.x = 0;
@@ -39,13 +50,20 @@ public class CarController : MonoBehaviour
 
     public void Turn()
     {
+        Debug.Log(rb.velocity);
+        //Reverse steering when in reverse
+        bool reverse = direction == Direction.Backward ? true : false;
+
+
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddTorque(Vector3.up * turnSpeed);
+            int turn = reverse ? -turnSpeed : turnSpeed;
+            rb.AddTorque(Vector3.up * turn);
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            rb.AddTorque(-Vector3.up * turnSpeed);
+            int turn = reverse ? turnSpeed : -turnSpeed;
+            rb.AddTorque(Vector3.up * turn);
         }
 
 
