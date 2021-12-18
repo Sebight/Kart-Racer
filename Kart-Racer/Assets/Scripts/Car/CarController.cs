@@ -5,7 +5,8 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
 
-    public enum Direction{
+    public enum Direction
+    {
         Forward,
         Backward
     }
@@ -27,7 +28,7 @@ public class CarController : MonoBehaviour
 
     public Direction direction;
 
-    
+
 
     public void Move()
     {
@@ -52,8 +53,8 @@ public class CarController : MonoBehaviour
     {
         Debug.Log(rb.velocity);
         //Reverse steering when in reverse
-        bool reverse = direction == Direction.Backward ? true : false;
-
+        // bool reverse = direction == Direction.Backward ? true : false;
+        bool reverse = false;
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -107,7 +108,7 @@ public class CarController : MonoBehaviour
         car = gameObject;
         startPos = transform.position;
         startRot = transform.rotation;
-        startPos.y = 8.821599f;
+        // startPos.y = 8.821599f;
         //GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //obj.transform.position = gameObject.transform.forward;
     }

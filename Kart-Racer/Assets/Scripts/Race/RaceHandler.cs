@@ -50,6 +50,7 @@ public class RaceHandler : MonoBehaviour
             //Start the race
             Debug.Log("Start");
             raceStarted = true;
+            Timer.StartTimer();
         } else if (numberCheckpoint == 1 && raceStarted)
         {
             //Finish the race
