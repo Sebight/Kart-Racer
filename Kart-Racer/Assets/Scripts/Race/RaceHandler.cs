@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 
@@ -15,6 +16,8 @@ public class RaceHandler : MonoBehaviour
     private bool raceStarted;
 
     private List<int> checkpointsFinished = new List<int>();
+
+    public List<TextMeshProUGUI> quartersTexts;
     
     public void NextCheckpoint()
     {
@@ -45,10 +48,22 @@ public class RaceHandler : MonoBehaviour
 
         if (!checkpointsFinished.Contains(numberCheckpoint)) checkpointsFinished.Add(numberCheckpoint);
 
+        
+        //numbercheckpoint is always the quarter it finished, exception is when checkpoint one is quarter 4
+
+        int currentQ = numberCheckpoint == 1 && raceStarted ? 4 : numberCheckpoint - 1;
+
+        //If it's not 0 then edit the texts
+        if (currentQ != 0 && raceStarted)
+        {
+            Timer.RegisterQuarterFinished(currentQ);
+            quartersTexts[currentQ - 1].text = $"Q{currentQ}: {Timer.GetQuarterTime(currentQ)}";
+            quartersTexts[currentQ - 1].gameObject.SetActive(true);
+        }
+
         if (numberCheckpoint == 1 && !raceStarted)
         {
             //Start the race
-            Debug.Log("Start");
             raceStarted = true;
             Timer.StartTimer();
         } else if (numberCheckpoint == 1 && raceStarted)
@@ -56,7 +71,7 @@ public class RaceHandler : MonoBehaviour
             //Finish the race
             if (CheckAllCheckpoints())
             {
-                Debug.Log("Finish the race");
+                Timer.StopTimer();
                 checkpointsFinished.Clear();
             } else 
             {

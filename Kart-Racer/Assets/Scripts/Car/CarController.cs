@@ -51,7 +51,6 @@ public class CarController : MonoBehaviour
 
     public void Turn()
     {
-        Debug.Log(rb.velocity);
         //Reverse steering when in reverse
         // bool reverse = direction == Direction.Backward ? true : false;
         bool reverse = false;
@@ -70,7 +69,7 @@ public class CarController : MonoBehaviour
 
     }
 
-    public void CheckGround()
+    public bool IsGrounded()
     {
         Ray ray = new Ray(transform.position, -transform.up);
         Debug.DrawRay(transform.position, (-transform.up * 5));
@@ -80,6 +79,7 @@ public class CarController : MonoBehaviour
                 //if (lastPositions.Count == 5) lastPositions.Dequeue();
                 lastPositions.Enqueue(transform);
             Debug.Log(lastPositions.Count + " "+ transform.position);*/
+            return true;
         }
         else
         {
@@ -91,15 +91,13 @@ public class CarController : MonoBehaviour
                 Debug.Log("back. Returned to: "+pos.transform.position);
                 lastReturnTime = Time.time;
             }*/
-            transform.position = startPos;
-            transform.rotation = startRot;
-            rb.velocity = Vector3.zero;
+            return false;
         }
     }
 
     public void Gravity()
     {
-        rb.AddRelativeForce(Vector3.up * gravity);
+        rb.AddForce(transform.up * gravity);
     }
 
     // Start is called before the first frame update
@@ -116,9 +114,11 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        CheckGround();
-        Move();
-        Turn();
+        if (IsGrounded())
+        {
+            Move();
+            Turn();
+        }
         Gravity();
 
     }
