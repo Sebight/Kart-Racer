@@ -18,7 +18,8 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        raceHandler.Collision(other.gameObject.name);
+        if (other.gameObject.tag == "Checkpoint") raceHandler.Collision(other.gameObject.name);
+        if (other.gameObject.tag == "OutOfBounds") Debug.Log("Out of bounds");
     }
 
     // Update is called once per frame

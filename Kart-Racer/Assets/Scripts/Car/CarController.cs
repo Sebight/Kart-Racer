@@ -69,6 +69,21 @@ public class CarController : MonoBehaviour
 
     }
 
+    public bool IsOffTheTrack()
+    {
+        //Draw ray from the car down to the ground
+        Ray ray = new Ray(car.transform.position, car.transform.up);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.red);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 3.5f))
+        {
+            if (hit.collider.gameObject.name == "OffTrack")
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public bool IsGrounded()
     {
         Ray ray = new Ray(transform.position, -transform.up);
@@ -118,6 +133,7 @@ public class CarController : MonoBehaviour
         {
             Move();
             Turn();
+            //IsOffTheTrack();
         }
         Gravity();
 
