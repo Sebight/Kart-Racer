@@ -8,6 +8,8 @@ public class CollisionHandler : MonoBehaviour
 
     public RaceHandler raceHandler;
 
+    public Timer timer;
+
     // Start is called before the first frame update
     
     void Start()
@@ -19,7 +21,7 @@ public class CollisionHandler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Checkpoint") raceHandler.Collision(other.gameObject.name);
-        if (other.gameObject.tag == "OutOfBounds") Debug.Log("Out of bounds");
+        if (other.gameObject.tag == "OutOfBounds") {Debug.Log("Out of bounds"); timer.AddPenalty(2);}
     }
 
     // Update is called once per frame

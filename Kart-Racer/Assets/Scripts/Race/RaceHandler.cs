@@ -19,6 +19,8 @@ public class RaceHandler : MonoBehaviour
 
     public List<TextMeshProUGUI> quartersTexts;
     
+    public Timer timer;
+
     public void NextCheckpoint()
     {
         currentCheckpoint++;
@@ -56,8 +58,8 @@ public class RaceHandler : MonoBehaviour
         //If it's not 0 then edit the texts
         if (currentQ != 0 && raceStarted)
         {
-            Timer.RegisterQuarterFinished(currentQ);
-            quartersTexts[currentQ - 1].text = $"Q{currentQ}: {Timer.GetQuarterTime(currentQ)}";
+            timer.RegisterQuarterFinished(currentQ);
+            quartersTexts[currentQ - 1].text = $"Q{currentQ}: {timer.GetQuarterTime(currentQ)}";
             quartersTexts[currentQ - 1].gameObject.SetActive(true);
         }
 
@@ -65,13 +67,13 @@ public class RaceHandler : MonoBehaviour
         {
             //Start the race
             raceStarted = true;
-            Timer.StartTimer();
+            timer.StartTimer();
         } else if (numberCheckpoint == 1 && raceStarted)
         {
             //Finish the race
             if (CheckAllCheckpoints())
             {
-                Timer.StopTimer();
+                timer.StopTimer();
                 checkpointsFinished.Clear();
             } else 
             {

@@ -7,20 +7,25 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
 
-    public static float timeLeft = 0;
-    public static bool timerIsOn = false;
+    public float timeLeft = 0;
+    public bool timerIsOn = false;
 
-    public static Dictionary<int, float> quartersTime = new Dictionary<int, float>();
+    public Dictionary<int, float> quartersTime = new Dictionary<int, float>();
 
     public TextMeshProUGUI timeText;
 
     //Lambda function StartTimer() wich sets the timerIsOn to true
-    public static void StartTimer()
+    public void StartTimer()
     {
         timerIsOn = true;
     }
 
-    public static void StopTimer()
+    public void AddPenalty(int n)
+    {
+        timeLeft += n;
+    }
+
+    public void StopTimer()
     {
         timerIsOn = false;
     }
@@ -36,12 +41,12 @@ public class Timer : MonoBehaviour
         timeText.text = " ";
     }
 
-    public static void RegisterQuarterFinished(int quarter)
+    public void RegisterQuarterFinished(int quarter)
     {
         quartersTime.Add(quarter, timeLeft);
     }
 
-    public static string GetQuarterTime(int quarter)
+    public string GetQuarterTime(int quarter)
     {
         System.TimeSpan time = System.TimeSpan.FromSeconds(quarter == 1 ? quartersTime[quarter] : quartersTime[quarter] - quartersTime[quarter - 1]);
         string qTime = time.ToString(@"mm\:ss\:fff");
