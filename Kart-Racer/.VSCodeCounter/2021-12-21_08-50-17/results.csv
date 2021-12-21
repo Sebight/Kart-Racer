@@ -1,0 +1,51 @@
+"filename", "language", "XML", "HLSL", "JSON", "ShaderLab", "C#", "Log", "comment", "blank", "total"
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assembly-CSharp.csproj", "XML", 715, 0, 0, 0, 0, 0, 7, 1, 723
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\Scripts\Camera\CameraController.cs", "C#", 0, 0, 0, 0, 19, 0, 2, 7, 28
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\Scripts\Car\CarController.cs", "C#", 0, 0, 0, 0, 98, 0, 23, 21, 142
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\Scripts\Menu\Menu.cs", "C#", 0, 0, 0, 0, 41, 0, 2, 16, 59
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\Scripts\Race\CollisionHandler.cs", "C#", 0, 0, 0, 0, 21, 0, 2, 10, 33
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\Scripts\Race\RaceHandler.cs", "C#", 0, 0, 0, 0, 82, 0, 6, 30, 118
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\Scripts\Race\Timer.cs", "C#", 0, 0, 0, 0, 58, 0, 10, 15, 83
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader", "ShaderLab", 0, 0, 0, 109, 0, 0, 2, 33, 144
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader", "ShaderLab", 0, 0, 0, 112, 0, 0, 3, 31, 146
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader", "ShaderLab", 0, 0, 0, 109, 0, 0, 2, 33, 144
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader", "ShaderLab", 0, 0, 0, 243, 0, 0, 4, 71, 318
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader", "ShaderLab", 0, 0, 0, 241, 0, 0, 4, 66, 311
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader", "ShaderLab", 0, 0, 0, 188, 0, 0, 10, 50, 248
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader", "ShaderLab", 0, 0, 0, 183, 0, 0, 8, 50, 241
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader", "ShaderLab", 0, 0, 0, 82, 0, 0, 4, 21, 107
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader", "ShaderLab", 0, 0, 0, 183, 0, 0, 8, 50, 241
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader", "ShaderLab", 0, 0, 0, 103, 0, 0, 8, 28, 139
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader", "ShaderLab", 0, 0, 0, 122, 0, 0, 4, 33, 159
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_SDF.shader", "ShaderLab", 0, 0, 0, 243, 0, 0, 4, 71, 318
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader", "ShaderLab", 0, 0, 0, 97, 0, 0, 0, 20, 117
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMPro.cginc", "HLSL", 0, 63, 0, 0, 0, 0, 2, 20, 85
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc", "HLSL", 0, 122, 0, 0, 0, 0, 2, 34, 158
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc", "HLSL", 0, 62, 0, 0, 0, 0, 10, 14, 86
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc", "HLSL", 0, 76, 0, 0, 0, 0, 7, 19, 102
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Assets\TextMesh Pro\Sprites\EmojiOne.json", "JSON", 0, 0, 155, 0, 0, 0, 0, 2, 157
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\AssetImportWorker0.log", "Log", 0, 0, 0, 0, 0, 246, 0, 2, 248
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\AssetImportWorker1.log", "Log", 0, 0, 0, 0, 0, 228, 0, 2, 230
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\AssetImportWorker2.log", "Log", 0, 0, 0, 0, 0, 3230, 0, 59, 3289
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\AssetImportWorker3.log", "Log", 0, 0, 0, 0, 0, 3194, 0, 59, 3253
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\shadercompiler-AssetImportWorker0.log", "Log", 0, 0, 0, 0, 0, 4, 0, 3, 7
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\shadercompiler-UnityShaderCompiler.exe0.log", "Log", 0, 0, 0, 0, 0, 6, 0, 4, 10
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\shadercompiler-UnityShaderCompiler.exe1.log", "Log", 0, 0, 0, 0, 0, 4, 0, 3, 7
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Logs\shadercompiler-UnityShaderCompiler.exe2.log", "Log", 0, 0, 0, 0, 0, 4, 0, 3, 7
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Packages\manifest.json", "JSON", 0, 0, 43, 0, 0, 0, 0, 1, 44
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Packages\packages-lock.json", "JSON", 0, 0, 357, 0, 0, 0, 0, 1, 358
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.CollabProxy.Editor.csproj", "XML", 850, 0, 0, 0, 0, 0, 7, 1, 858
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.PlasticSCM.Editor.csproj", "XML", 991, 0, 0, 0, 0, 0, 7, 1, 999
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.Rider.Editor.csproj", "XML", 719, 0, 0, 0, 0, 0, 7, 1, 727
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.Services.Core.Editor.csproj", "XML", 788, 0, 0, 0, 0, 0, 7, 1, 796
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.TextMeshPro.Editor.csproj", "XML", 751, 0, 0, 0, 0, 0, 7, 1, 759
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.TextMeshPro.csproj", "XML", 735, 0, 0, 0, 0, 0, 7, 1, 743
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.Timeline.Editor.csproj", "XML", 974, 0, 0, 0, 0, 0, 7, 1, 982
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.Timeline.csproj", "XML", 749, 0, 0, 0, 0, 0, 7, 1, 757
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.VSCode.Editor.csproj", "XML", 707, 0, 0, 0, 0, 0, 7, 1, 715
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\Unity.VisualStudio.Editor.csproj", "XML", 726, 0, 0, 0, 0, 0, 7, 1, 734
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\UnityEditor.TestRunner.csproj", "XML", 831, 0, 0, 0, 0, 0, 7, 1, 839
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\UnityEditor.UI.csproj", "XML", 732, 0, 0, 0, 0, 0, 7, 1, 740
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\UnityEngine.TestRunner.csproj", "XML", 765, 0, 0, 0, 0, 0, 7, 1, 773
+"d:\Programování\Unity\Kart-Racer\Kart-Racer\UnityEngine.UI.csproj", "XML", 751, 0, 0, 0, 0, 0, 7, 1, 759
+"Total", "-", 11784, 323, 555, 2015, 319, 6916, 232, 897, 23041

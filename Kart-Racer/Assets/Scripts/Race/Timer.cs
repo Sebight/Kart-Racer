@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
 
     public Dictionary<int, float> quartersTime = new Dictionary<int, float>();
 
+    public bool isDNF = false;
+
     public TextMeshProUGUI timeText;
 
     //Lambda function StartTimer() wich sets the timerIsOn to true
@@ -28,6 +30,14 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         timerIsOn = false;
+    }
+
+    public void ResetTimer()
+    {
+        timerIsOn = false;
+        timeLeft = 0;
+        timeText.text = "00:00:000";
+        timeText.color = Color.white;
     }
 
     private void RedText()
@@ -48,9 +58,30 @@ public class Timer : MonoBehaviour
 
     public string GetQuarterTime(int quarter)
     {
-        System.TimeSpan time = System.TimeSpan.FromSeconds(quarter == 1 ? quartersTime[quarter] : quartersTime[quarter] - quartersTime[quarter - 1]);
-        string qTime = time.ToString(@"mm\:ss\:fff");
-        return qTime;
+        if (!isDNF)
+        {
+            try
+            {
+                System.TimeSpan time = System.TimeSpan.FromSeconds(quarter == 1 ? quartersTime[quarter] : quartersTime[quarter] - quartersTime[quarter - 1]);
+                string qTime = time.ToString(@"mm\:ss\:fff");
+                return qTime;
+            }
+            catch
+            {
+                ShowRaceDNF();
+                return "skipped";
+            }
+        }
+        return "";
+
+    }
+
+    public void ShowRaceDNF()
+    {
+        isDNF = true;
+        StopTimer();
+        RedText();
+        timeText.text = "DNF";
     }
 
     void Update()

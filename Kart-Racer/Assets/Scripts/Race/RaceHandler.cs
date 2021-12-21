@@ -9,7 +9,6 @@ public class RaceHandler : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject start;
     public int checkpoints;
     public int currentCheckpoint = 1;
 
@@ -17,9 +16,13 @@ public class RaceHandler : MonoBehaviour
 
     private List<int> checkpointsFinished = new List<int>();
 
+    public Transform carSpawn;
+
     public List<TextMeshProUGUI> quartersTexts;
     
     public Timer timer;
+
+    public CarController car;
 
     public void NextCheckpoint()
     {
@@ -43,6 +46,25 @@ public class RaceHandler : MonoBehaviour
         return true;
     }
 
+    public void ResetRace()
+    {
+        currentCheckpoint = 1;
+        checkpointsFinished.Clear();
+        timer.quartersTime.Clear();
+
+        timer.ResetTimer();
+        raceStarted = false;
+        
+        car.transform.position = carSpawn.position;
+        car.transform.rotation = carSpawn.rotation;
+        car.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        foreach (TextMeshProUGUI text in quartersTexts)
+        {
+            text.text = "";
+        }
+
+    }
     public void Collision(string checkpoint)
     {
         int numberCheckpoint;
@@ -56,7 +78,7 @@ public class RaceHandler : MonoBehaviour
         int currentQ = numberCheckpoint == 1 && raceStarted ? 4 : numberCheckpoint - 1;
 
         //If it's not 0 then edit the texts
-        if (currentQ != 0 && raceStarted)
+        if (currentQ != 0 && raceStarted && !timer.isDNF && timer.timerIsOn)
         {
             timer.RegisterQuarterFinished(currentQ);
             quartersTexts[currentQ - 1].text = $"Q{currentQ}: {timer.GetQuarterTime(currentQ)}";
@@ -77,7 +99,7 @@ public class RaceHandler : MonoBehaviour
                 checkpointsFinished.Clear();
             } else 
             {
-                Debug.Log("Cheater");
+                timer.ShowRaceDNF();
             }
             
         }
